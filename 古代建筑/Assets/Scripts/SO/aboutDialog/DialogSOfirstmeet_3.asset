@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da807e99e7c9a64891267ab97360054, type: 3}
+  m_Name: DialogSOfirstmeet_3
+  m_EditorClassIdentifier: 
+  speakerSprite: {fileID: 21300000, guid: 105782d7c6b04b749bd37a1ebc6104d1, type: 3}
+  isReading: 0
+  Content: "\u79C0\u624D\u4E0D\u5FD8\u672C\uFF0C\u80AF\u613F\u4FEE\u590D\u8001\u5B85\uFF0C\u5374\u4E0D\u4E00\u5B9A\u5BF9\u8FD9\u571F\u6728\u4E4B\u4E8B\u4E86\u89E3\uFF0C\u4E0D\u5982\u8BA9\u6211\u6765\u7ED9\u79C0\u624D\u8BB2\u89E3\u8FD9\u8001\u5B85\u57FA\u7840\u77E5\u8BC6"
+  canOption: 0
+  willEnd: 1
+  Next: {fileID: 11400000, guid: 7c4fa34bbfacaae4d9dd78d3e59abff6, type: 2}
+  eWillStart: 1
