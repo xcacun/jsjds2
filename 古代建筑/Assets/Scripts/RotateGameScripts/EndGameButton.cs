@@ -14,6 +14,8 @@ public class EndGameButton : MonoBehaviour
     public CinemachineVirtualCamera PlayerFollow;
     public Camera Camera;
     public CinemachineBrain cinemachineBrain;
+    public GameObject director1;
+    public GameObject director2;
     private void OnEnable()
     {
         Event.Instance.IntroduceGameEnd += OnIntroduceGameEnd;
@@ -41,7 +43,14 @@ public class EndGameButton : MonoBehaviour
         blackImage.DOKill();
         PlayerFollow.Priority = 11;
         blackImage.DOColor(new Color(0, 0, 0, 0), duration);
+        StartCoroutine(StartNextDirec());
         
-        
+    }
+    IEnumerator StartNextDirec()
+    {
+        yield return new WaitForSeconds(1f);
+        director1.SetActive(false);
+        director2.SetActive(true);
+          yield break;
     }
 }

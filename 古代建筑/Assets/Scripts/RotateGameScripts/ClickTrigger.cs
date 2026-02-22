@@ -29,7 +29,14 @@ public class ClickTrigger : MonoBehaviour
         hasTriggered = true;
         Event.Instance.CallIntroduceOnUI(introduceContentSO);
         if (threeTrigger[0].hasTriggered&& threeTrigger[1].hasTriggered && threeTrigger[2].hasTriggered)
-        { GameEndButton.gameObject.SetActive(true); }
+        {
+            GameEndButton.GetComponent<Image>()?.DOFade(0f, 0f);
+            GameEndButton.GetComponent<Image>()?.DOKill();
+
+            GameEndButton.gameObject.SetActive(true);
+            GameEndButton.GetComponent<Image>()?.DOFade(0f, 0f);
+            GameEndButton.GetComponent<Image>()?.DOFade(1f, 1.3f);
+        }
     }
    IEnumerator DoAnimation()
     {
