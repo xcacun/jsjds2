@@ -31,7 +31,7 @@ public class EndGameButton : MonoBehaviour
     }
     void BlackImageAppear()
     {
-        blackImage.DOColor(new Color(0, 0, 0, 0),0);
+        
         blackImage.gameObject.SetActive(true);
         blackImage.DOKill();
         blackImage.DOColor(new Color(0, 0, 0, 1), duration); }
@@ -39,16 +39,18 @@ public class EndGameButton : MonoBehaviour
     {
         yield return new WaitForSeconds(duration+0.1f);
         Destroy(ThingsAboutGame);
+        director1.SetActive(false);
+        director2.SetActive(true);
         IntroduceGameUI.SetActive(false);
         blackImage.DOKill();
         PlayerFollow.Priority = 11;
         blackImage.DOColor(new Color(0, 0, 0, 0), duration);
-        StartCoroutine(StartNextDirec());
+       
         
     }
     IEnumerator StartNextDirec()
     {
-        yield return new WaitForSeconds(1f);
+       
         director1.SetActive(false);
         director2.SetActive(true);
           yield break;

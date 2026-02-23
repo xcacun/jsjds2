@@ -111,10 +111,7 @@ public class 主角与工匠移动 : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 检查所有必要引用是否为空
-    /// </summary>
-    /// <returns>是否全部有效</returns>
+
     private bool CheckReferences()
     {
         bool isAllValid = true;
@@ -129,9 +126,7 @@ public class 主角与工匠移动 : MonoBehaviour
         return isAllValid;
     }
 
-    /// <summary>
-    /// 重置所有角色到起始位置
-    /// </summary>
+
     public void ResetAllToStartPoint()
     {
         if (Player != null && PlayerStart != null)
@@ -147,9 +142,6 @@ public class 主角与工匠移动 : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 启动所有角色移动
-    /// </summary>
     public void StartAllMove()
     {
         if (CheckReferences())
